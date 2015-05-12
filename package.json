@@ -1,0 +1,20 @@
+{
+  "name": "mojio-tom-test",
+  "author": "Robb Lovell",
+  "description": "Tests for Tom",
+  "version": "0.0.1",
+  "dependencies": {
+    "mojio-js": "3.4.0",
+    "restler": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "chai": "*",
+    "coffee-script": "*"
+  },
+  "engines": {
+    "node": "0.10.*",
+    "npm": "1.4.*"
+  }
+}
