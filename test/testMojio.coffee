@@ -3,8 +3,8 @@ mojio = require '../src/libMojio'
 config = require '../src/config'
 
 local_config = {
-    application: 'fd3ec62d-4e63-4889-9282-0313be66cb69',
-    secret: 'c2f14ec9-bf27-4ccb-8f48-de0774533345',
+    application: '',
+    secret: '',
     hostname: 'api.moj.io',
     version: 'v1',
     port:'443',
