@@ -62,8 +62,8 @@ module.exports =
             err = new Error("We are not connected to Mojio.")
             return callback(err)
 
-        model = mojioClient.model(local_config.Subject)
-        mojioClient.get(model, local_config, (err, result) ->
+        model = mojioClient.model(local_config.subject)
+        mojioClient.get(model, local_config.criteria, (err, result) ->
             if (err)
                 callback(err)
             else

@@ -4,7 +4,7 @@
   "description": "Tests for Tom",
   "version": "0.0.1",
   "dependencies": {
-    "mojio-js": "3.4.0",
+    "mojio-js": "3.4.1",
     "restler": "*"
   },
   "devDependencies": {

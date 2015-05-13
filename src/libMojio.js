@@ -82,8 +82,8 @@
         err = new Error("We are not connected to Mojio.");
         return callback(err);
       }
-      model = mojioClient.model(local_config.Subject);
-      return mojioClient.get(model, local_config, function(err, result) {
+      model = mojioClient.model(local_config.subject);
+      return mojioClient.get(model, local_config.criteria, function(err, result) {
         if (err) {
           return callback(err);
         } else {

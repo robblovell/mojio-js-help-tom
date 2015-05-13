@@ -3,15 +3,15 @@ mojio = require '../src/libMojio'
 config = require '../src/config'
 
 local_config = {
-    application: 'fd3ec62d-4e63-4889-9282-0313be66cb69',
-    secret: 'c2f14ec9-bf27-4ccb-8f48-de0774533345',
+    application: '6457d3dc-32f1-4f47-b030-211bc5544533',
+    secret: '35bf63e7-4443-4883-8d46-1e9195dec800',
     hostname: 'api.moj.io',
     version: 'v1',
     port:'443',
     scheme:'https',
     signalr_port:'80',
     signalr_scheme:'http'
-    live: true
+    live: false
 }
 
 
@@ -38,6 +38,7 @@ describe 'Mojio Library', ->
             expect(result.length).to.be.at.least(1)
             done()
         )
+
     it 'gets user information, thus proving that moj.io is indeed connected', (done) ->
         this.timeout(5000)
         mojio.getUser((err, result) ->
@@ -47,8 +48,8 @@ describe 'Mojio Library', ->
         )
 
     it 'Gets all events from previous trip', (done) ->
-        this.timeout(30000)
-        mojio.getEntity(config.trips, (err, result) ->
+        this.timeout(300000)
+        mojio.getEntity(config.trip, (err, result) ->
             expect(result.Data.length).to.be.at.least(1)
             expect(result.Objects.length).to.be.at.least(1)
             done()

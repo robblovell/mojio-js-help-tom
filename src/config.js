@@ -2,18 +2,30 @@
 (function() {
   module.exports = {
     user: {
-      username: "",
-      password: ""
+      username: "anonymous",
+      password: "Password007"
     },
     app: {
-      application: "",
-      secret: "",
+      application: "6457d3dc-32f1-4f47-b030-211bc5544533",
+      secret: "35bf63e7-4443-4883-8d46-1e9195dec800",
       redirect: "http://46.226.14.158:3000/mojio",
       hostname: "api.moj.io",
       version: "v1",
       port: "443",
       scheme: "https",
       live: false
+    },
+    vehicle: {
+      subject: "Vehicle",
+      criteria: "f7fd11ba-3a0a-4f8c-9a21-08c5605ca718"
+    },
+    trip: {
+      subject: "Trip",
+      criteria: {
+        criteria: {
+          VehicleId: "f7fd11ba-3a0a-4f8c-9a21-08c5605ca718"
+        }
+      }
     },
     trips: {
       Subject: "Trip",

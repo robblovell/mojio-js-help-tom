@@ -9,15 +9,15 @@
   config = require('../src/config');
 
   local_config = {
-    application: 'fd3ec62d-4e63-4889-9282-0313be66cb69',
-    secret: 'c2f14ec9-bf27-4ccb-8f48-de0774533345',
+    application: '6457d3dc-32f1-4f47-b030-211bc5544533',
+    secret: '35bf63e7-4443-4883-8d46-1e9195dec800',
     hostname: 'api.moj.io',
     version: 'v1',
     port: '443',
     scheme: 'https',
     signalr_port: '80',
     signalr_scheme: 'http',
-    live: true
+    live: false
   };
 
   describe('Mojio Library', function() {
@@ -53,8 +53,8 @@
       });
     });
     return it('Gets all events from previous trip', function(done) {
-      this.timeout(30000);
-      return mojio.getEntity(config.trips, function(err, result) {
+      this.timeout(300000);
+      return mojio.getEntity(config.trip, function(err, result) {
         expect(result.Data.length).to.be.at.least(1);
         expect(result.Objects.length).to.be.at.least(1);
         return done();
